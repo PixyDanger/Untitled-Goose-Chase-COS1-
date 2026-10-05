@@ -54,13 +54,14 @@ int main()
     leadCheck = UI::Verify(leadInt, 1, 4);
     if (leadCheck == false)
     {
-        UI::Message("That wasn not a choice. Are you sure you are an investigator?");
+        UI::Message("That was not a choice. Are you sure you are an investigator?");
     }
     if (leadCheck == true)
     {
         switch (leadInt)
         {
         case 1:
+            LeadChoice::LeadScenarioChoice(1);
             UI::Message("Choice 1");
             break;
 

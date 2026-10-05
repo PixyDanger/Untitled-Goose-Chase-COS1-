@@ -6,6 +6,8 @@
 
 class LeadChoice
 {
+public:
+
     static void LeadScenarioChoice(int leadOption);
 
 };
