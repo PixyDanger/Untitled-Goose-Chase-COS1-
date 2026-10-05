@@ -8,7 +8,7 @@ class LeadChoice
 {
 public:
 
-    static void LeadScenarioChoice(int leadOption);
+    static void LeadPlayerChoice(int leadOption);
 
 };
 

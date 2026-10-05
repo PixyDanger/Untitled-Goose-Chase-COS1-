@@ -61,7 +61,7 @@ int main()
         switch (leadInt)
         {
         case 1:
-            LeadChoice::LeadScenarioChoice(1);
+            LeadChoice::LeadPlayerChoice(1);
             UI::Message("Choice 1");
             break;
 

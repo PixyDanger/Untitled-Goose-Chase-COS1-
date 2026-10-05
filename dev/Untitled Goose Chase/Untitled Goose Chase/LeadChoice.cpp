@@ -1,7 +1,7 @@
 #include "LeadChoice.h"
 
 
-void LeadChoice::LeadScenarioChoice(int leadOption)
+void LeadChoice::LeadPlayerChoice(int leadOption)
 
 {
     int scenarioChoice;
