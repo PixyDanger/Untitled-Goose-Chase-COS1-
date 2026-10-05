@@ -8,22 +8,15 @@ class Character
 
 public:
 
-	char* _name[32];
+	char* _playerName;
+	char* _characterName;
+	int _playCount = 0;
 
-	char* _characterName[32];
+	Character();
 
-	int playCount;
+	void setName();
 
-	std::vector<Character> _characterInfo;
-
-
-		Character()
-		{
-
-		}
-
-
-
+	Character(char* playerName, char* characterName, int playcount);
 
 
 	};

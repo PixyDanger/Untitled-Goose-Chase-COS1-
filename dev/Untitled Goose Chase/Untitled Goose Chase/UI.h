@@ -23,11 +23,11 @@ public:
 		std::cout << std::endl;
 	}
 
-	static bool Verify(int answer, int high, int low)
+	static bool Verify(int answer, int low, int high)
 
 	{
 		bool check = false;
-		if (low >= answer && answer <= high)
+		if (answer >= low && answer <= high)
 		{
 			check = true;
 		}

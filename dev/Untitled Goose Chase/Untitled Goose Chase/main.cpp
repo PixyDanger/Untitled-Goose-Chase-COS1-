@@ -47,16 +47,14 @@ int main()
     UI::Message("(Choose a lead using the number assigned to it.)");
     UI::Message("There isn't much time, which are you going to follow?");
     UI::Message("List summary of the lead options, numbered");
-    do{
-    char leadChar;
+    
     int leadInt;
     bool leadCheck = false;
-    std::cin >> leadChar;
-    leadInt = (int)leadChar;
+    std::cin >> leadInt;
     leadCheck = UI::Verify(leadInt, 1, 4);
     if (leadCheck == false)
     {
-        UI::Message("That wasn't a choice. Are you sure you are an investigator?"); break;
+        UI::Message("That wasn not a choice. Are you sure you are an investigator?");
     }
     if (leadCheck == true)
     {

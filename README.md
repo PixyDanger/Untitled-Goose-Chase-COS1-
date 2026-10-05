@@ -8,7 +8,7 @@ Hello my name is Elizabeth Ostenburg. I am a student from Orlando, Fl. The purpo
 
 <br>
 
-## 📢 &nbsp; Weekly Stand Up
+## 📢  Weekly Stand Up
 
 Each week I will summarize my milestone activity and progress by writing a stand-up. A stand-up is meant to be a succinct update on how things are going. Use these prompts as a guide on what to write about:
 
