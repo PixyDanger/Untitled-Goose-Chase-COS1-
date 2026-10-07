@@ -24,7 +24,11 @@ Each week I will summarize my milestone activity and progress by writing a stand
 
 ### Week 1
 
-Replace this paragraph with your stand up for this week. Use the prompts above to summarize your most recent milestone activity and work.
+So far this week I have:
+Created a majority of my classes, w/ the functions I know I need declared and defined. Created a small test of my user menu, making sure it can correctly identify a valid input, and call the related function. It is modular and should scale well. 
+My biggest challenge was still my tech choosing violence. The one I can control more is needing to type up my story components for my text choose you own adventure. 
+I improved my organizations of my code creating classes that were modular for easy editions and reducing the clutter in my main cpp. 
+By my next milestone I'd like to have all of the story components so far added, for a full test of my base game, following that I'd like create the save/retrieve of the character's story choices.
 
 ### Week 2
 
