@@ -139,7 +139,19 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Untitled Goose Chase.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="LeadChoice.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Playthrough.cpp" />
+    <ClCompile Include="ScenarioChoice.cpp" />
+    <ClCompile Include="UI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="LeadChoice.h" />
+    <ClInclude Include="Playthrough.h" />
+    <ClInclude Include="ScenarioChoice.h" />
+    <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
