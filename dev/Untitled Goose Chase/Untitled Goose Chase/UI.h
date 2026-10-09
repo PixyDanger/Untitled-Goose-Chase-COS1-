@@ -1,11 +1,11 @@
 #pragma once
 #include <iostream>
+#include <string>
+#include <stdexcept>
 
-class UI
-
+namespace UI
+	// User Interface and commonly repeated code base on user input
 {
-
-public:
 
 	static void Message(std::string message)
 	{
@@ -23,17 +23,63 @@ public:
 		std::cout << std::endl;
 	}
 
-	static bool Verify(int answer, int low, int high)
-
+	static int VerifyNumber(const std::string& userPrompt, int low, int high)
 	{
-		bool check = false;
-		if (answer >= low && answer <= high)
+		while (true)
 		{
-			check = true;
+			std::cout << userPrompt << std::endl;
+			std::string userInput;
+			std::getline(std::cin, userInput);
+			try
+			{
+				int userNumber = std::stoi(userInput);
+				if (userNumber >= low && userNumber <= high)
+				{
+					return userNumber;
+				}
+				std::cout << "That answer is invalid. Please try entering a numerical value " << low << " through " << high << ".\n";
+			}
+			catch (...)
+			{
+				std::cout << "That answer is invalid. Please try entering a numerical value " << low << " through " << high << ".\n";
+			}
+
 		}
 
-		return check;
 	}
+
+	static std::string IsStringEmpty(const std::string userPrompt)
+	{
+		while (true)
+		{
+			std::cout << userPrompt << std::endl;
+			std::string userInput;
+			std::getline(std::cin, userInput);
+			if (!userInput.empty())
+			{
+				return userInput;
+			}
+			std::cout << "You did not respond, try again.\n";
+		}
+	}
+
+	static char yesORno(const std::string userPrompt)
+	{
+		while (true)
+		{
+			std::cout << userPrompt << std::endl;
+			std::string userInput;
+			std::getline(std::cin, userInput);
+			if (!userInput.empty())
+			{
+				char charAnswer = userInput[0];
+				charAnswer = std::tolower(charAnswer);
+				return charAnswer;
+			}
+			std::cout << "You did not respond, try again.\n";
+		}
+	}
+
 
 
 };
