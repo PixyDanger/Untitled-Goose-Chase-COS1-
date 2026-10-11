@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Character.h"
-#include "LeadChoice.h"
+#include "Lead.h"
 #include "ScenarioChoice.h"
 
 

@@ -4,7 +4,7 @@
 
 //need to separate into .h and .cpp
 
-class LeadChoice
+class Lead
 {
 public:
 

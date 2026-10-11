@@ -1,12 +1,11 @@
-#include "LeadChoice.h"
+#include "Lead.h"
 #include <string>
 
 
-void LeadChoice::LeadPlayerChoice(int leadOption)
+void Lead::LeadPlayerChoice(int leadOption)
 
 {
    int scenarioChoice;
-    bool validateChoice;
 
     switch (leadOption)
     {
@@ -33,13 +32,6 @@ void LeadChoice::LeadPlayerChoice(int leadOption)
 
         break;
 
-
-
-    case 4:
-
-
-
-        break;
 
 
 
