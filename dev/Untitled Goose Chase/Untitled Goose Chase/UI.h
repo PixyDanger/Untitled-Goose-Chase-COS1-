@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <stdexcept>
 
 namespace UI
@@ -9,7 +10,32 @@ namespace UI
 
 	static void Message(std::string message)
 	{
-		std::cout << message << std::endl;
+		int maxWidth = 115;
+		std::istringstream sentence(message);
+		std::string word;
+		std::string sen;
+
+		while (sentence >> word)
+		{
+			if (sen.empty())
+			{
+				sen = word;
+			}
+			else if (sen.length() + 1 + word.length() > maxWidth)
+			{
+				std::cout << sen << std::endl;
+				sen = word;
+			}
+			else
+			{
+				sen = sen + " " + word;
+			}
+			
+		}
+		if (!sen.empty())
+		{
+			std::cout << sen << std::endl;
+		}
 	}
 
 		static void Divider()
