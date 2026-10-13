@@ -1,11 +1,11 @@
-#include "LeadChoice.h"
+#include "Lead.h"
+#include <string>
 
 
-void LeadChoice::LeadPlayerChoice(int leadOption)
+void Lead::LeadPlayerChoice(int leadOption)
 
 {
-    int scenarioChoice;
-    bool validateChoice;
+   int scenarioChoice;
 
     switch (leadOption)
     {
@@ -14,13 +14,9 @@ void LeadChoice::LeadPlayerChoice(int leadOption)
         //This should be a good starting point for the scenario class as well. 
         UI::Message("Sucessfully accessed Lead Choices");
         UI::Message("Describe Scenario and 3 options");
-        UI::Message("Ask user what they would like to do from options");
-        std::cin >> scenarioChoice;
-        validateChoice = UI::Verify(scenarioChoice, 1, 3);
-        if (validateChoice == true)
-        {
-            //go to scenario choice
-        }
+        scenarioChoice = UI::VerifyNumber("Ask user what they would like to do from options", 1, 3);
+        std::cout << "Placeholder sucessfully verified.";
+
         break;
 
 
@@ -36,13 +32,6 @@ void LeadChoice::LeadPlayerChoice(int leadOption)
 
         break;
 
-
-
-    case 4:
-
-
-
-        break;
 
 
 
