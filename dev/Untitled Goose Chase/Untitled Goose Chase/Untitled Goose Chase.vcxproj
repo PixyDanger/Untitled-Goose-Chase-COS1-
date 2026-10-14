@@ -144,6 +144,7 @@
     <ClCompile Include="LeadMenu.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Playthrough.cpp" />
+    <ClCompile Include="Scenario.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,7 @@
     <ClInclude Include="Lead.h" />
     <ClInclude Include="LeadMenu.h" />
     <ClInclude Include="Playthrough.h" />
+    <ClInclude Include="Scenario.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

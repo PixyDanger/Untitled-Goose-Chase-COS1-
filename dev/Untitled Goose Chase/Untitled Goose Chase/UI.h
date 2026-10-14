@@ -106,6 +106,18 @@ namespace UI
 		}
 	}
 
+	static bool rollForIt(int limit)
+	{
 
+		int check = rand() % 20;
+		if (check > limit)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 
 };
