@@ -3,6 +3,7 @@
 
 void LeadMenu::AccessLeads()
 {
+    UI::ClearUniversal();
     char charAnswer;
     bool intro = false;
     do
@@ -36,13 +37,16 @@ void LeadMenu::AccessLeads()
     UI::Spacer();
     std::cout << "\t";
     UI::Message("One of the first reports we recieved was from a local fisherman, Jaune. This was actually slightly before the kidnapping. Jaune gave us a heads up that there was a boat he didn't recognize pulled up on shore rather close to the castle. We had already put it on or rounds for the next day, just to be safe. When we went to talk with them after the kidnapping the man on the boat agreed to stay for a few days, but refused to talk about the incident.");
+    UI::Continue();
     UI::Spacer();
     std::cout << "\t";
     UI::Message("Our next lead came from one of the huntsmen in town, Sun. He reported an armored man he bumped to in the Emerald Forest. When he tried to check on the man to see if he was lost and the man just laughed and kept walking. Ren drew a map to where he'd run into the man and noted he carried a large bag and came from the general direction of the castle.");
+    UI::Continue();
     UI::Spacer();
     std::cout << "\t";
     UI::Message("Last, and perhaps weirdest, the Valkyrie twins found a trail of toadstools and fairy flowers going into Forever Fall. Forever Fall is an odd little forest that is seperated from the rest of the land by two rivers, and is butted up against the base of a cliff off Mountain Glenn. The rivers are actually formed from waterfalls coming off that same mountain. It's a creepy little woods, there is a bridge of sorts, a small strip of land where the rivers almost touch, but its rare someone uses it. Since the kidnapping the bridge has been covered with the mushrooms and flowers the kids were going on about.");
     UI::Message("That's all we have at this time.");
+    UI::Continue();
     UI::Spacer();
     UI::Message("To summarize you can:");
     UI::Message("(1) Check out a suspicious boat near the castle.");

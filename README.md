@@ -32,7 +32,10 @@ By my next milestone I'd like to have all of the story components so far added, 
 
 ### Week 2
 
-My next stand up will go here...
+This week I was able to make the main menu, lead menu, and lead classes all function properly, added text wrapping to the terminal, and added the first half of the story (thus far). 
+The biggest obstacle was implementing the text wrapping. It became very evident that it was necessary, but was a surprise task and challenge. 
+Learned how to text wrap, and found a cleaner way to implement the story intro. 
+My priorities this week are getting the character creator working so I can work on player history. 
 
 ### Week 3
 

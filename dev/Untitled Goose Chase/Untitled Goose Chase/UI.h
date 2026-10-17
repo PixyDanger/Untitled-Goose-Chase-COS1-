@@ -3,6 +3,8 @@
 #include <string>
 #include <sstream>
 #include <stdexcept>
+#include <limits>
+#include <cstdlib>
 
 namespace UI
 	// User Interface and commonly repeated code base on user input
@@ -105,6 +107,83 @@ namespace UI
 			std::cout << "You did not respond, try again.\n";
 		}
 	}
+
+	static bool rollForIt(int limit)
+	{
+
+		int check = (rand() % 20) +1;
+		if (check >= limit)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+
+
+
+
+
+	static void Continue()
+
+	{
+
+		// std::cin.clear();
+
+		// std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+		std::cout << " --press enter to continue-- ";
+
+		std::string enter;
+
+		std::getline(std::cin, enter);
+
+		return;
+
+	}
+
+	static void End()
+
+	{
+
+		// std::cin.clear();
+
+		// std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+		std::cout << "~*~ You have reached then end of your investigation.~*~\n";
+		std::cout << "              --Press enter to continue--               ";
+		std::string enter;
+
+		std::getline(std::cin, enter);
+
+		return;
+
+	}
+
+
+
+//	void Clear() {
+//
+//#ifdef _WIN32
+//
+//		system("cls");
+//
+//#else
+//
+//		system("clear");
+//
+//#endif
+//
+//	}
+//
+//
+//
+static void ClearUniversal() { std::cout << "\033[2J\033[1;1H"; }
+
+
 
 
 
