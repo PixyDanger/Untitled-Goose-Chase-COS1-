@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include "UI.h"
-#include "Character.h"
+#include "Player.h"
 #include "LeadMenu.h"
 #include "Lead.h"
 #include "Playthrough.h"

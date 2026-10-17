@@ -3,6 +3,8 @@
 
 class Scenario
 {
+public:
+
 	static void Boat(int scenarioOption);
 
 	static void Paladin(int scenarioOption);

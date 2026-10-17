@@ -139,19 +139,19 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Character.cpp" />
     <ClCompile Include="Lead.cpp" />
     <ClCompile Include="LeadMenu.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Playthrough.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerHistory.cpp" />
     <ClCompile Include="Scenario.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Character.h" />
     <ClInclude Include="Lead.h" />
     <ClInclude Include="LeadMenu.h" />
-    <ClInclude Include="Playthrough.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerHistory.h" />
     <ClInclude Include="Scenario.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
