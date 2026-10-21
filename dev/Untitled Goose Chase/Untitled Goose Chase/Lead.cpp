@@ -19,9 +19,11 @@ void Lead::LeadPlayerChoice(int leadOption)
         UI::Spacer();
         UI::Message("You can try the following tactics:");
         UI::Message("(1) Investigate: Attempt to to gather informations without appearing suspious.");
-        UI::Message("(2) Insigate: Attempt a brute force method to either yield information or remove the obstacle.");
+        UI::Message("(2) Instigate: Attempt a brute force method to either yield information or remove the obstacle.");
         UI::Message("(3) Interest: Attempt to start a friendly conversation to gather information.");
+        UI::Spacer();
         scenarioChoice = UI::VerifyNumber("How do you want to do this?", 1, 3);
+        UI::Spacer();
         Scenario::Boat(scenarioChoice);
         
 
@@ -29,15 +31,18 @@ void Lead::LeadPlayerChoice(int leadOption)
 
 
     case 2:
-
-        UI::Message("");
-        UI::Message("");
+        UI::ClearUniversal();
+        UI::Message("You travel through the woods in the direction the huntsman indicated. A few hours in you hear a muffled honking sound. You enter a clearing to see an armored man with a noisy bag.");
+        UI::Message("You notice the man's armor is emblazened with the icon of Phyrra the goddess of fate. A paladin kidnapping a goose is truly baffling.");
+        UI::Message("He sees you and calls out: Hail traveler! I am escorting a prisoner to Ironwood. This goose is actually Roman, the leader of Grimm crime syndicate, he was polymorphed to go into hiding.");
         UI::Spacer();
         UI::Message("You can try the following tactics:");
         UI::Message("(1) Investigate: Attempt to to gather informations without appearing suspious.");
-        UI::Message("(2) Insigate: Attempt a brute force method to either yield information or remove the obstacle.");
+        UI::Message("(2) Instigate: Attempt a brute force method to either yield information or remove the obstacle.");
         UI::Message("(3) Interest: Attempt to start a friendly conversation to gather information.");
+        UI::Spacer();
         scenarioChoice = UI::VerifyNumber("How do you want to do this?", 1, 3);
+        UI::Spacer();
         Scenario::Paladin(scenarioChoice);
       
 
@@ -45,14 +50,15 @@ void Lead::LeadPlayerChoice(int leadOption)
         break;
 
     case 3:
-
+        UI::ClearUniversal();
         UI::Message("You follow the winding path of toadstools and glowing flowers for what feels like hours. Finally you reach a clearing where fae creatures are drinking honey and cream. While you see an assortment of small fairies of many colors, you do not see a goose.");
         UI::Spacer();
         UI::Message("You can try the following tactics:");
         UI::Message("(1) Investigate: Attempt to to gather informations without appearing suspious.");
-        UI::Message("(2) Insigate: Attempt a brute force method to either yield information or remove the obstacle.");
+        UI::Message("(2) Instigate: Attempt a brute force method to either yield information or remove the obstacle.");
         UI::Message("(3) Interest: Attempt to start a friendly conversation to gather information.");
         scenarioChoice = UI::VerifyNumber("How do you want to do this?", 1, 3);
+        UI::Spacer();
         Scenario::Fairy(scenarioChoice);
 
         break;

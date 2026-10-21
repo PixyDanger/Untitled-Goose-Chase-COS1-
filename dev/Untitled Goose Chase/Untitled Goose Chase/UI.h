@@ -130,6 +130,7 @@ namespace UI
 	static void Continue()
 
 	{
+		std::cout << std::endl;
 
 		// std::cin.clear();
 
