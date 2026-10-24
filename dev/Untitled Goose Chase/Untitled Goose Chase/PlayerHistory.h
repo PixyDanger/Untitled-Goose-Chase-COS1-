@@ -26,6 +26,7 @@ public:
     std::string PlayerStory();
     static void StoreStory(const std::string& playerName, int& leadChoice, int& scenarioChoice);
     static void GetStory();
+    static void ClearStory();
     
   
 };

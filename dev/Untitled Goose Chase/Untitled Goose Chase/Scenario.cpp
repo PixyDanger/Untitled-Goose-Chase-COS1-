@@ -85,8 +85,8 @@ void Scenario::Boat(int scenarioOption)
 void Scenario::Paladin(int scenarioOption)
 {
     int illAdvised = (rand() % 20) + 1;
-    int lead = 2;
-    int scenario = 0;
+    lead = 2;
+    scenario = 0;
     switch (scenarioOption)
     {
     case 1:
@@ -152,8 +152,8 @@ void Scenario::Paladin(int scenarioOption)
 
 void Scenario::Fairy(int scenarioOption)
 {
-    int lead = 3;
-    int scenario = 0;
+    lead = 3;
+    scenario = 0;
     bool chance = false;
     switch (scenarioOption)
     {

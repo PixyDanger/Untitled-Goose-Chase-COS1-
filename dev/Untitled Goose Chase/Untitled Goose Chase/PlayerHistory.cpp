@@ -25,7 +25,7 @@ static const std::map<int, std::string> endStory =
 
     { 3," getting thrown across the river by a homoculus. You were left bruised, sodden, and unsuccessful in your search.\n" },
 
-    { 4," chatting with Qrow. He let you know where Oscar went. You found the goose a top her nest of golden eggs.\n" },
+    { 4," chatting with Qrow. He let you know where Oscar went, but you were surprised to see the goose a top her nest of golden eggs.\n" },
 
     { 5," finding out that Oscar was actually a polymorphed man and let the paladin leave with him.\n" },
 
@@ -74,8 +74,8 @@ PlayerHistory::PlayerHistory(const std::string& playerName, int leadChoice, int 
 std::string PlayerHistory::PlayerStory()
 {
 
-    std::string story = "You decided to " + whichLead->at(_leadChoice) + " and ended up " + whichEnd->at(_scenarioChoice);
-    return story;
+   return "You decided to " + whichLead->at(_leadChoice) + " and ended up " + whichEnd->at(_scenarioChoice);
+   
 }
 
 void PlayerHistory::StoreStory(const std::string& playerName, int& leadChoice, int& scenarioChoice)
@@ -95,9 +95,6 @@ void PlayerHistory::StoreStory(const std::string& playerName, int& leadChoice, i
         << currentStory.getScenarioChoice()
         << '\n';
 
-
-
-    std::cout << std::filesystem::current_path() << '\n';
     file.close();
 
 }
@@ -126,20 +123,31 @@ void PlayerHistory::GetStory()
         std::getline(ss, leadString, ',');
         std::getline(ss, scenarioString);
 
+        int savingLead = std::stoi(leadString);
+        int savingScenario = std::stoi(scenarioString);
+
         playerTimeline.emplace_back(
             nameString,
-            std::stoi(leadString),
-            std::stoi(scenarioString));
+            savingLead,
+            savingScenario);
     }
 
     for ( auto& player : playerTimeline)
     {
-        std::cout << ( player.getPlayer());
-        std::cout << "\n\t";
-        std::cout << ( player.PlayerStory());
+        UI::Message(player.getPlayer());
+        UI::Message(player.PlayerStory());
+        UI::Spacer();
     }
     file.close();
 
+}
+
+void PlayerHistory::ClearStory()
+{
+    std::ofstream ofs;
+    ofs.open("PlayerFile.txt", std::ios::trunc);
+    ofs.close();
+    UI::Message("Players save data is reset.");
 }
 
 
