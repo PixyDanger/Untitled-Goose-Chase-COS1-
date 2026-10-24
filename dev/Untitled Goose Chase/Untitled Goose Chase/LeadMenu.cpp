@@ -54,7 +54,7 @@ bool LeadMenu::AccessLeads()
     UI::Message("We have some leads base on the staff and locals we spoke with.");
     UI::Spacer();
     std::cout << "\t";
-    UI::Message("One of the first reports we recieved was from a local fisherman, Jaune. This was actually slightly before the kidnapping. Jaune gave us a heads up that there was a boat he didn't recognize pulled up on shore rather close to the castle. We had already put it on or rounds for the next day, just to be safe. When we went to talk with them after the kidnapping the man on the boat agreed to stay for a few days, but refused to talk about the incident.");
+    UI::Message("One of the first reports we recieved was from a local fisherman, Jaune. This was actually slightly before the kidnapping. Jaune gave us a heads up that there was a boat he didn't recognize pulled up on shore rather close to the castle. We had already put it on our rounds for the next day, just to be safe. When we went to talk with them after the kidnapping the man on the boat agreed to stay for a few days, but refused to talk about the incident.");
     UI::Continue();
     UI::Spacer();
     std::cout << "\t";
