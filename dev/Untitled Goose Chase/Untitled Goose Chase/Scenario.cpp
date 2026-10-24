@@ -1,7 +1,24 @@
 #include "Scenario.h"
 
+
+int lead = -1;
+int scenario = 0;
+
+int Scenario::LeadSave()
+{
+    return lead;
+}
+
+int Scenario::ScenarioSave()
+{
+    return scenario;
+}
+
 void Scenario::Boat(int scenarioOption)
 {
+    lead = 1;
+    scenario = 0;
+   
     bool chance = false;
     switch (scenarioOption)
     {
@@ -15,6 +32,9 @@ void Scenario::Boat(int scenarioOption)
             UI::Message("Something in your eyes must convince him. He points accross the river to a small cave. I saw the goose go there, he mutters, before he lets the sail free and the homonculus pushes them off.");
             UI::Message("You head on down to the cave a peer inside.");
             UI::Message("It appears Sir Oscar is not sir, for she is in a nest full of eggs made of gold.");
+            scenario = 1;
+            Scenario::LeadSave();
+            Scenario::ScenarioSave();
             UI::Spacer();
             UI::End();
             UI::ClearUniversal();
@@ -23,6 +43,9 @@ void Scenario::Boat(int scenarioOption)
         {
             UI::Spacer();
             UI::Message("He stares at you unblinking for several moments before snapping his fingers. The sail suddenly billows and the homonculus pushes them off. With a magical gust of wind the boat is rushed down the river.");
+            scenario = 2;
+            Scenario::LeadSave();
+            Scenario::ScenarioSave();
             UI::Spacer();
             UI::End();
             UI::ClearUniversal();
@@ -32,6 +55,9 @@ void Scenario::Boat(int scenarioOption)
     case 2:
         UI::Spacer();
         UI::Message("You try to force your way onto the boat. Before you have a chance to register what is happening you are thrown across the river. Your back smacks the water so hard you are dazed and struggle to find your barings as you sink. Then your legs feel the soft sand of the riverbed. You landed just short of the shore. As you comtemplate whether or not the construct meant to keep you alive you watch the boat sail off.");
+        scenario = 3;
+        Scenario::LeadSave();
+        Scenario::ScenarioSave();
         UI::Spacer();
         UI::End();
         UI::ClearUniversal();
@@ -39,27 +65,36 @@ void Scenario::Boat(int scenarioOption)
 
     case 3:
         UI::Spacer();
-        UI::Message("As you ask him about his travels and tribe, he begins to open up. I am Sun, he says, I was in a storm and got thrown off course. I came here as it seemed a safe place to get my bearings, but everyone is going crazy over the old woman's goose. It's right underneath the castle you can see it's cave from here. As he points, you indeed do see the entrance to a small cave.");
+        UI::Message("As you ask him about his travels and tribe, he begins to open up. I am Qrow, he says, I was in a storm and got thrown off course. I came here as it seemed a safe place to get my bearings, but everyone is going crazy over the old woman's goose. It's right underneath the castle you can see it's cave from here. As he points, you indeed do see the entrance to a small cave.");
         UI::Message("I'd have told the others, but they acted like I was a thief. So I let them wonder.");
         UI::Continue();
         UI::Spacer();
         UI::Message("You chuckle as you wish him well and head on down to the cave. You peer inside and laugh once more.");
         UI::Message("It appears Sir Oscar is not sir, for she is in a nest full of eggs made of gold.");
+        scenario = 4;
+        Scenario::LeadSave();
+        Scenario::ScenarioSave();
         UI::Spacer();
         UI::End();
         UI::ClearUniversal();
         break;
     }
+
 }
 
 void Scenario::Paladin(int scenarioOption)
 {
     int illAdvised = (rand() % 20) + 1;
+    lead = 2;
+    scenario = 0;
     switch (scenarioOption)
     {
     case 1:
         UI::Message("You stare at the paladin and then the goose and back again then motion for him to continue. He sighs and bops the bag, which tears apart as the goose is transformed into a man, with an unusaully long neck.");
         UI::Message("This will be a joy to explain to her lady, but at least the mystery is solved. The castle will likely be safer with the criminal in custody.");
+        scenario = 5;
+        Scenario::LeadSave();
+        Scenario::ScenarioSave();
         UI::Spacer();
         UI::End();
         UI::ClearUniversal();
@@ -71,15 +106,25 @@ void Scenario::Paladin(int scenarioOption)
         if (illAdvised >= 18)
         {
             UI::Message("Somehow you manage to steal the goose and make it back to Lady Salem. A few weeks later you hear of her being found dead in her sleep and a mysterious, unknown nephew with an unusually long neck takes over the estate.");
+            scenario = 6;
+            Scenario::LeadSave();
+            Scenario::ScenarioSave();
         }
         else if (illAdvised >= 10)
         {
             UI::Message("You attempt to grab the bag, the paladin sees and backhands you. You and the goose hit the ground hard. Ears ringing you look up to  to see the paladin clutching a small man by his awkwardly long neck.");
+            scenario = 7;
+            Scenario::LeadSave();
+            Scenario::ScenarioSave();
         }
         else
         {
             UI::Message("You manage to grab the bag, but the paladin accuses you being in league with the criminal and stabs you through with his blade. As you bleed out you see the goose has also been smote and watch him transform into a scrawny guy with a disproportionately long neck.");
+            scenario = 8;
+            Scenario::LeadSave();
+            Scenario::ScenarioSave();
         }
+        
         UI::Spacer();
         UI::End();
         UI::ClearUniversal();
@@ -95,6 +140,9 @@ void Scenario::Paladin(int scenarioOption)
             UI::Message("You ask how he could be sure. He turns to the bagged goose. Roman is an incompetent, and badly dressed leader. The sentence isn't even finished before the goose is flailing and honking up a storm.");
             UI::Message("You concede to let him take the goose. As he leaves he mentions that Oscar may still be alive. Neo prefers subterfuge and would want to have the option to swap them back.");
             UI::Message("You leave the clearing knowing this goose chase may have just begun.");
+            scenario = 9;
+            Scenario::LeadSave();
+            Scenario::ScenarioSave();
             UI::Spacer();
             UI::End();
             UI::ClearUniversal();
@@ -104,12 +152,17 @@ void Scenario::Paladin(int scenarioOption)
 
 void Scenario::Fairy(int scenarioOption)
 {
+    lead = 3;
+    scenario = 0;
     bool chance = false;
     switch (scenarioOption)
     {
     case 1:
         UI::Message("The fae notice you sneaking around immediately, and with a chorus of raspberries, they disappear back into the fae realm.");
         UI::Message("You search the clearing and find an elegant nest made of ribbons of velvet and studded with jewels. You search high and low and find no sign of Oscar.");
+        scenario = 10;
+        Scenario::LeadSave();
+        Scenario::ScenarioSave();
         UI::Spacer();
         UI::End();
         UI::ClearUniversal();
@@ -119,6 +172,9 @@ void Scenario::Fairy(int scenarioOption)
         UI::Message("As you run into the clearing to attack the fairies summon a fae web. They coo at you as you lie tangled on the ground. You get the feeling they think your attempt was adorable.");
         UI::Message("They roll you over and sit you up next to the wayward goose. Oscar has been decked out with a crown made of lost or stolen jewelry and a robe of beautiful velvets, silks, and cashmere.");
         UI::Message("You spend the night being plied with sweets and ambrosia. When you wake the next morning you are lying in a soft bed of moss with Oscar asleep on your chest. You gather the goose and your dignity and head back to the castle not sure how you will recount this tale.");
+        scenario = 11;
+        Scenario::LeadSave();
+        Scenario::ScenarioSave();
         UI::Spacer();
         UI::End();
         UI::ClearUniversal();
@@ -132,6 +188,9 @@ void Scenario::Fairy(int scenarioOption)
         {
             UI::Message("You manage to keep your wits about you and they seem impressed. They lead you to Oscar and allow you to take him home.");
             UI::Message("It is late at night by the time you are heading back to the castle. You need not worry though as your way is lit by Oscar, apparently touched by fairy fire. Oh well, at least he made it home.");
+            scenario = 12;
+            Scenario::LeadSave();
+            Scenario::ScenarioSave();
             UI::Spacer();
             UI::End();
             UI::ClearUniversal();
@@ -143,6 +202,9 @@ void Scenario::Fairy(int scenarioOption)
             UI::Continue();
             UI::Spacer();
             UI::Message("The fae start to chant and glow and with a flash of light you are transported to the fae. Still befuddled you recognize you are have been sent to a fairy court and will not likely be leaving anytime soon. For some reason this doesn't bother you, you aren't even sure what you were doing before this.");
+            scenario = 13;
+            Scenario::LeadSave();
+            Scenario::ScenarioSave();
             UI::Spacer();
             UI::End();
             UI::ClearUniversal();
@@ -150,3 +212,7 @@ void Scenario::Fairy(int scenarioOption)
         break;
     }
 }
+
+
+
+

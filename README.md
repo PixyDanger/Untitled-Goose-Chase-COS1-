@@ -39,8 +39,40 @@ My priorities this week are getting the character creator working so I can work 
 
 ### Week 3
 
-Stay tuned, this stand up is coming soon...
+- ⚙️ Features added
+    
+    - Press enter to continue, added text wrapping, and a limited screen clear
+        
+- 🧱 Updates to your system design
+    
+    - added lead menu, cleaned up scenario class, simplified the player class
+        
+- 🧹 Refactoring improvements
+    
+    - cleaned up the main, lead menu, lead, and scenario classes to be more modular to make editing and additions easier.
+        
+- 💭 What you changed and why
+    
+    - I improved the UI for better readability and clearer instructions. Had a few people test it for feedback. I also added a lead menu class to have the first story choice and second choice be separate files for cleaner code.
 
 ### Week 4
 
-My final stand up...
+- ⚙️ **Overview** – What did you accomplish this past week?
+    
+    - Added players history, the program can now store the outcomes, add it to a text file in short hand, then pull the files and display all players choices, I also added clear option to wipe the file and start fresh. I also created the story synopsis map and copy.
+        
+- 🛠️ **Project Wrap-Up** – What did you finish, polish, or improve before submitting your final project?
+    
+    - A few edits to make the UI a bit better, and the player history portion.
+        
+- 🌵 **Challenges** – What obstacles did you face, and how did you overcome them?
+    
+    - While trying to test that a function was working appropriately I accidentally added some junk data so it was displaying a line of nonsense that it took me longer than I want to talk about to track down. In the end it was the use of adding cout checks to wittle down where it could be in the code.
+        
+- 📚 **Biggest Takeaway** – Looking back, what was the most valuable thing you learned during this course?
+    
+    - Tenacity and grace. My tech problems reached a point where I thought I might just have to give up on this month. But I reached out to Kari, got some advice, and by utilizing that and giving myself a little grace, I managed to pull out a final project. Is it 100% what I envisioned, no, but it works and I'm proud of it.
+        
+- 🔮 **Future Development** – If you continued this project after the course, what would you build or improve next?
+    
+    - Add color and images to the UI, expand the story at least one more level, and track the playthroughs to unlock extra options on subsequent playthroughs.

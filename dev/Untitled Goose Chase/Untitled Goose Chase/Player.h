@@ -9,9 +9,8 @@ protected:
 
 public:
 	std::string& getPlayer();
-	std::string& getCharacter();
 
 	void setPlayer(std::string& playerName);
-	void setCharacter(std::string& characterName);
+
 };
 

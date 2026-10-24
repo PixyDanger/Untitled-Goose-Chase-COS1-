@@ -1,8 +1,9 @@
 #pragma once
 #include <iostream>
 #include "UI.h"
+#include "PlayerHistory.h"
 
-//need to separate into .h and .cpp
+
 
 class Lead
 {

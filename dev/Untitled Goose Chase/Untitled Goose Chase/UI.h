@@ -45,6 +45,12 @@ namespace UI
 		std::cout << "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n";
 	}
 
+		static void weakDivider()
+		{
+			std::cout << "------------------------------------------------\n";
+		}
+
+
 	static void Spacer()
 
 	{
