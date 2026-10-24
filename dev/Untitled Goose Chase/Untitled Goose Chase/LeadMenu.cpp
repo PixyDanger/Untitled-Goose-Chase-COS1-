@@ -1,19 +1,33 @@
 #include "LeadMenu.h"
 #include "Lead.h"
 
-void LeadMenu::AccessLeads()
+
+std::string player;
+std::string LeadMenu::NameSave()
+{
+    return player;
+}
+
+bool LeadMenu::AccessLeads()
 {
     UI::ClearUniversal();
     char charAnswer;
     bool intro = false;
+  
     do
     {
-        charAnswer = UI::yesORno("Welcome are you the investigator? (y,n)");
+        player = UI::IsStringEmpty("Welcome traveler, what is your name?");
+        UI::Spacer();
+        Player tempPlayer;
+        tempPlayer.setPlayer(player);
+        UI::Message("Welcome " + player);
+        LeadMenu::NameSave();
+        charAnswer = UI::yesORno("Are you the investigator? (y,n)");
 
         if (charAnswer == 'y')
         {
             UI::Spacer();
-            UI::Message("Thank the gods! You arrived quickly. The captain of the city guard sent me to greet you.");
+            UI::Message("Thank the gods! You arrived quickly. I am Nora, the captain of the city guard sent me to greet you.");
             intro = true;
         }
         else if (charAnswer == 'n')
@@ -23,13 +37,17 @@ void LeadMenu::AccessLeads()
             UI::Spacer();
             UI::Message("Your journey has ended.");
             UI::Spacer();
-            return;
+            int lead = 0;
+            int scenario = 14;
+            PlayerHistory::StoreStory(player, lead, scenario);
+            return false;
 
         }
 
         else { UI::Message("That answer wasn't quite clear. Please use y or n for your response"); }
 
     } while (!intro);
+
 
     UI::Message("Someone kidnapped Sir Oscar last night. Lady Salem is overwrought. We need to find him immediately.");
     UI::Spacer();
