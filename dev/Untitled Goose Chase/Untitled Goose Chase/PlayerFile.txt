@@ -1,4 +1,1 @@
-Liz,3,13
-Penny,3,13
-pat,2,5
-Chris the Seeker of Geese,2,5
+Liz,0,14

@@ -16,7 +16,7 @@ int main()
     int scenario = -1;
     std::string name = "Grimm";
     bool playedGame = true;
-    bool charAnswer = false;
+    char charAnswer;
         
         UI::Divider();
         UI::Message("XXXXXXXXXXXXX UNTITLED GOOSE CHASE XXXXXXXXXXXXX");
@@ -44,32 +44,37 @@ int main()
             UI::Spacer();
             menuChoice = UI::VerifyNumber("What you you like to do? ", 1, 4);
             UI::Spacer();
-                switch (menuChoice)
+            switch (menuChoice)
+            {
+            case 1:
+                playedGame = LeadMenu::AccessLeads();
+                if (playedGame == false) { break; }
+                lead = Scenario::LeadSave();
+                scenario = Scenario::ScenarioSave();
+                name = LeadMenu::NameSave();
+                PlayerHistory::StoreStory(name, lead, scenario);
+                UI::Spacer();
+                break;
+
+            case 2:
+                UI::Message("Here is your story so far: ");
+                UI::Spacer();
+                PlayerHistory::GetStory();
+                UI::Spacer();
+                break;
+
+            case 3:
+                charAnswer = UI::yesORno("Would you like to clear the player history and start fresh? (y,n)");
+                if (charAnswer == 'y')
                 {
-                case 1:
-                    playedGame = LeadMenu::AccessLeads();
-                    if (playedGame == false) {break;}
-                    lead = Scenario::LeadSave();
-                    scenario = Scenario::ScenarioSave();
-                    name = LeadMenu::NameSave();
-                    PlayerHistory::StoreStory(name, lead, scenario);
-                    UI::Spacer();            
-                    break;
-
-                case 2:
-                    UI::Message("Here is your story so far: ");
-                    UI::Spacer();
-                    PlayerHistory::GetStory();
-                    UI::Spacer();
-                    break;
-
-                case 3:            
-                    charAnswer = UI::yesORno("Would you like to clear the player history and start fresh? (y,n)");
-                    if(charAnswer == true)
-                    { }
-                    UI::Spacer();
                     PlayerHistory::ClearStory();
-                    UI::Spacer();
+                    break;
+                }
+                else
+                {
+                    UI::Message("Player history not cleared.");
+                }
+                UI::Spacer();
                     break;
 
                 case 4:
